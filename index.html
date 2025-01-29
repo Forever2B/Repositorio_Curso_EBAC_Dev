@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>jQuery</title>
+</head>
+<body>
+    <header>
+        <h1>lista De Atividades</h1>
+        <button type="button" id="headerButton">Opções da Lista +</button>
+    </header>
+    <form id="formTarefas">
+        <h2>Opções</h2>
+        <input type="text" id="AtividadeNome" required placeholder="Nome Da Atividade">
+        <button type="submit" id="SubmitButton">Adicionar</button>
+        <button type="button" id="ButtonReset">Limpar lista</button>
+        <button type="reset">Fechar</button>
+    </form>
+    <ul id="Tarefas">
+    </ul>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

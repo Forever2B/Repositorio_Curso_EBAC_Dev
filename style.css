@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    background-color: rgb(135, 222, 193);
+    padding: 16px 0px;
+    color: rgb(0, 0, 0);
+    display: flex;
+    border-bottom: 16px solid rgb(112, 187, 162);
+    justify-content: center;
+    text-transform: uppercase;
+    font-style: italic;
+    
+}
+
+header button {
+    margin-left: 16px;
+}
+
+body {
+    background-color: aliceblue;
+}
+
+button {
+    font-weight: bold;
+}
+
+form {
+    background-color: rgb(171, 203, 206);
+    text-align: center;
+    padding: 24px 0;
+    margin-bottom: 12px;
+
+    display: none;
+}
+form h2 {
+    margin-bottom: 16px;
+}
+
+.LinhasAtiv {
+    text-align: center;
+    font-size: 25px;
+}
+.LinhasAtiv:hover {
+    cursor: pointer;
+}
+
+.LinhasAtivRiscado {
+    text-decoration: line-through;
+    opacity: 70%;
+}
