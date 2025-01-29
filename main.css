@@ -1,0 +1,518 @@
+/*- - - - FONTES DA PÁGINA - - - -*/
+.font01 {
+        font-family: "Mate", serif;
+        font-weight: 400;
+        font-style: normal;     
+}
+
+.font02 {
+    font-family: "EB Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: 100px;
+    font-style: normal;
+}
+/*- - - - ATRIBUTOS GLOBAIS - - - -*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Mate", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*-----------------------------------------------------------------------------------------*/
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    font-family: "Mate", serif;
+    font-weight: 600;
+    font-style: normal;   
+}
+
+body {
+    overflow-x: hidden;
+    height: 100%;
+    background-color: #e65768;
+    background-image: url('./images/bottlelogo2.png');
+    background-size: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+}
+
+/*----------------  HEADER / CABEÇALHO --------------------------*/
+
+.HEADPROJECT {
+    position: fixed;
+    width: 100%;
+
+}
+
+header img {
+    height: 90px;
+    padding: 0%;
+    border: 0;
+    margin: 0;
+    left:245px;
+    top: 3px;
+    bottom: 1px;
+    position:absolute;
+}
+
+header .container {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .container h1{
+    font-family: "EB Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 45px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);  
+}
+
+header {
+    position: fixed; 
+    padding: 17px 0;
+    color: #f2364b;
+    background-color: #1f131b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+
+    z-index: 1000;
+}
+
+header nav li {
+    display: inline;
+    padding-left: 12px;
+    margin-right: 10px;
+    margin-left: 10px;
+    line-height: 10px;
+    
+    font-size: 18px;
+    font-family: "Mate", serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+header a {
+    color: rgba(255, 255, 255, 0.845);
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+header a:hover {
+    color: #f2364b;
+    font-size: 22px;
+    border: 2px solid;
+    border: #290218;
+}
+
+nav {
+    display: flex;
+    margin-left: auto;
+    gap: 20px;
+}
+
+.headerbuttons {
+    position:absolute;
+    height: auto;
+    right: 150px;
+}
+.headerbuttons i {
+    font-size: 30px;
+    cursor: pointer;
+}
+.headerbuttons img{
+    cursor: pointer;
+    height: 30px;
+    top: 0px;
+    left: 75px;
+}
+
+
+/*---------------------- CAIXA DE PESQUISA ---------------------*/
+.search-box {
+    position: absolute ;
+    right: 40%;
+    height: 40px;
+    border-radius: 40px;
+    background-color: rgba(255, 255, 255, 0.845);
+    justify-content: center;
+    padding: 10px;
+    top: 30px;
+    height: 40px;
+    transition: 0.3s;
+
+    width: 0px;
+}
+
+.search-txt {
+    position: absolute;
+    border: none;
+    background: none;
+    outline: none;
+    font-weight: 600;
+    color: black;
+    Font-size: 16px;
+    height: 40px;
+    top: 0px;
+    bottom: 0%;
+    transition: 0,4s;
+    opacity: 0%;
+
+    width: 0px;
+}
+
+.search-btn {
+    color: #290218;
+    float:right;
+    width: 41px;
+    height: 41px;
+    background: rgba(255, 255, 255, 0);
+    display: flex;
+    left: 1087px;
+    top: 29px;
+    bottom: 0px;
+    right: 0px;
+    z-index: 10;
+    cursor: pointer;
+    
+}
+
+.search-btn:hover + .search-box .search-txt {
+    width: 220px;
+    opacity: 100%;
+    transition: 0.5s;
+}
+
+.search-btn:hover + .search-box {
+    width: 210px;
+}
+
+.search-txt:hover {
+    width: 220px;
+    opacity: 100%;
+    transition: 0.5s;
+}
+
+.search-box:hover {
+    width: 220px;
+}
+
+.search-txt:focus {
+    width: 220px;
+    opacity: 100%;
+    transition: 0.5s;
+}
+.search-box:focus-within {
+    width: 220px;
+    opacity: 100%;
+    transition: 0.5s;
+}
+
+.search-btn:hover {
+    transform: rotate(360deg);
+    transition: transform 0.4s ease;
+}
+.chatheader {
+    position: absolute;
+    bottom: 100px;
+    top: 870px;
+    left: -220px;
+}
+.chatheader img {
+    height: 60px;
+    width: 60px;
+}
+
+/*---------------------- BANNER -----------------------------*/
+
+.banner {
+    overflow: hidden;
+    position: relative;
+    top: 90px;
+    height: 260px;
+    width:100%;
+    box-shadow:0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.banner img {
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+}
+
+.slides {
+    display: flex;
+    animation: slide 12s infinite;
+}
+@keyframes slide {
+    0% { transform: translateX(0); }
+    33.33% { transform: translateX(-100%); } /* Mover para a esquerda para a segunda imagem */
+    66.66% { transform: translateX(-200%); } /* Mover para a esquerda para a terceira imagem */
+    100% { transform: translateX(0); } /* Retorna à primeira imagem */
+}
+.slides img {
+    min-width: 100%; /* Cada imagem ocupa 100% do contêiner */
+    transition: opacity 1s ease-in-out; /* Transição suave */
+}
+.slides img:nth-child(1) { animation-delay: 0s; }
+.slides img:nth-child(2) { animation-delay: 5s; }
+.slides img:nth-child(3) { animation-delay: 7s; }
+/*---------------------- SOBRE A LOJA ----------------------*/
+.brands_list img{
+    height: 30px;
+}
+
+
+.brands_list li{
+    display: inline;
+    margin-right: 8px;
+}
+
+section .container{
+    align-items: flex-start;
+    margin-top: 800px;
+}
+
+
+section {
+    color: #dcdcdc;
+    padding: 24px 0;
+    justify-content: space-between;
+    grid-template-columns: repeat(2, 1fr);
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+
+section h2 {
+    margin-bottom: 20px;
+    font-size: 40px;
+    color:#290218;
+    font-weight: 800;
+    font-weight: 100px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+
+section p {
+    margin-bottom: 8px;
+    font-size: 20px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+.store_front {
+    margin-right: 32px;
+    box-shadow:0 4px 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+}
+
+
+/*------------------ PAINEL DE PRODUTOS ---------------------*/
+.productsDisplay {
+    margin-top: 200px;
+    margin-left: auto;
+    height:auto;
+    width: 850px;
+    padding: 20px;
+    margin-top: 600px;
+    border: 2px solid #290218;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    background-color: #1e141196;
+    list-style-type: none;
+}
+.productsDisplay nav {
+    background-color: #290218;
+    height: 90px;
+    margin: -10px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.productsDisplay nav p {
+    text-align: center;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    font-size: 50px;
+    color: #f2364b;
+    font-weight: 100px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+.productsDisplay img{
+    height: 150px;
+}
+
+.productsDisplay ul {
+    display: grid;
+    margin-top: 11px;
+    grid-template-columns: repeat(3, 1fr);
+    box-sizing: border-box;
+
+}
+
+.productsDisplay li {
+    flex-direction: row;
+    display: flex;
+    overflow-wrap: normal;
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;
+
+    flex: 0 0 24%;
+    width: 250px;
+    background-color: #00000045;
+    border: 1px solid #101010;
+    margin-top: 18px;
+    padding: 5px;
+    margin-left: 8px;
+    margin-right: 8px;
+    box-sizing: border-box;
+    height: 160px;
+    cursor: pointer;
+}
+.productsDisplay li h4 {
+    font-weight: 800px;
+    font-size: 18px;
+    padding: 1px;
+    margin-left: 4px;
+    color:#db2e42;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.productsDisplay li p {
+    color: rgb(233, 233, 233);
+    font-size: 15px;
+    font-weight: 600px;
+    margin-top: -10px;
+}
+.productsDisplay h5 {
+    margin: 10px;
+    font-size: 20px;
+    color: gold;
+    background-color: #17141463;
+}
+
+.showmore h6 {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+.showmore {
+    margin-left: auto;
+    margin-top: 0px;
+    margin-bottom: 200px;
+    margin-bottom: -15px;
+    background-color: #1c0000;
+    width: 850px;
+    height: auto;
+    cursor: pointer;
+}
+.showmore:hover > h6 {
+    color: #f2364b;
+}
+/*--------------- CONTATO -------------------------*/
+.social_links li {
+    margin-right: 8px;
+    list-style: none;
+}
+
+
+.social_links li a {
+    text-decoration: none;
+    margin-right: 8px;
+}
+
+
+#contact .container {
+    display: block;
+}
+
+.contact_methods {
+    display: flex;
+    justify-content: space-between;
+    background-color: #aeacacab;
+    border: 1px solid #101010;
+    padding: 10px;
+}
+
+
+form input,
+form textarea,
+form button {
+    display: block;
+    width: 320px;
+    margin-bottom: 8px;
+    padding: 8px;
+    font-weight: 500;
+}
+
+form textarea {
+    resize: none;
+    height: 180px;
+}
+
+
+textarea:focus,
+input:focus {
+    outline-color: #540a13;
+}
+
+
+section h3 {
+    margin-bottom: 16px;
+    color: #010101;
+    font-weight: 600;
+}
+
+
+form button {
+    background-color:#290218;
+    color: #f8f8ff;
+    border: none;
+    cursor:pointer
+}
+
+
+form button:hover {
+    background-color:#f2364b;
+}
+
+.social_links img {
+    height: 40px;
+}
+
+.endsection div h2{
+    font-size: 40px;
+}
+
+.endereco {
+    color:#010101;
+    font-size: 18px;
+}
+
+/*---------------- FOOTER -------------------------*/
+footer {
+    background-color: #0c0c14ef;
+    color: #f8f8ff;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);  
+    padding: 12px 0;
+}
