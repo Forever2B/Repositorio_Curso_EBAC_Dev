@@ -1,0 +1,26 @@
+@use 'var';
+
+
+body {
+    background-color: var.$corprincipal;
+
+
+    .container{
+        max-width: 50%;
+        background-color: rgb(0, 106, 220);
+
+        div {
+             max-width: 50%;
+
+             diviimage {
+                width: 80%; 
+
+
+                 img {
+                    
+                     width: 100%;
+                 }
+             }
+        }
+    }
+}

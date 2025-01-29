@@ -1,0 +1,1 @@
+function somar(VarUm,VarDois){return VarUm+VarDois}module.exports=somar;
