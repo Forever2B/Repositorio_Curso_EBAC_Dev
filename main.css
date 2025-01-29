@@ -1,0 +1,12 @@
+.DivNumber {
+    padding: 10PX;
+    margin: 18px;
+
+}
+.FormGeral {
+    align-items: center;
+    display: flex;
+}
+.DivNumber input {
+    margin: 8px 0px 8px 8px;
+}
