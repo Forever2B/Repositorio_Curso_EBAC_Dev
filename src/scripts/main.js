@@ -1,14 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('result').addEventListener('submit', function(evento) {
-        evento.preventDefault();
-        
-        let maxnumber = parseInt(document.getElementById('maxnumber').value);
-
-        let numeroAle = Math.random() * maxnumber;
-        numeroAle = Math.floor(numeroAle + 1);
-
-
-        document.getElementById('resultvalor').innerText = numeroAle;
-        document.querySelector('.resultado').style.display = 'block';
-    })
-})
+    document.getElementById('form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        let num1 = parseFloat(document.getElementById('num1').value);
+        let num2 = parseFloat(document.getElementById('num2').value);
+        let soma = num1 + num2;
+        document.getElementById('resultado').innerText = 'Resultado: ' + soma;
+    });
+});
