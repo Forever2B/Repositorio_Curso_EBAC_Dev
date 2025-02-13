@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "dev": "gulp watch",
     "build": "gulp",
-    "sass": "sass",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,7 +21,8 @@
   "homepage": "https://github.com/Forever2B/Repositorio_Curso_EBAC_Dev#readme",
   "description": "",
   "devDependencies": {
-    "gulp": "^5.0.0",
+    "gulp": "^4.0.2",
+    "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^5.1.0",
     "sass": "^1.84.0"
   }
