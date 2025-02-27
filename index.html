@@ -8,11 +8,26 @@
     <title>Clone Disney Plus</title>
 </head>
 <body>
+    <header class="header ">
+        <div class="header__container">
+            <h1>
+                <img class="header__logo" src="./dist/images/disneyplus.svg" alt="Disney+">
+            </h1>
+            <ul class="header__links">
+                <li class="header__links__item">
+                    <a class="button button--secondary" href="#">Assine agora</a>
+                </li>
+                <li class="header__links__item">
+                    <a class="button button--dark" href="#">Entrar</a>
+                </li>
+            </ul>
+        </div>
+    </header>
     <section class="hero">
         <div class="hero__content">
-            <h1 class="hero__content__branding">
-                <img src="./dist/images/disneyplus.svg" alt="Disney+">
-            </h1>
+            <div class="hero__content__branding">
+               
+            </div>
             <h3 class="title--small">
                 As melhores histórias em um só lugar.
             </h3>
@@ -25,12 +40,12 @@
             <ul class="hero__content__combos">
                 <li class="hero__content__combos__combo">
                     <img src="./dist/images/logos/disney_star_plus.png" alt="disneystarplus">
-                    <button class="button1">Assine Agora</button>
+                    <button class="button">Assine Agora</button>
                     <span class="text">R$ 45,90/mês*</span>
                 </li>
                 <li class="hero__content__combos__combo">
                     <img src="./dist/images/logos/disney_star_plus.png" alt="disneystarplus">
-                    <button class="button1">Assine Agora</button>
+                    <button class="button">Assine Agora</button>
                     <span class="text">R$ 45,90/mês*</span>
                 </li>
             </ul>
@@ -121,7 +136,7 @@
                 <p class="text--big">
                     No Disney+ você encontra as últimas estreias do cinema, originais e clássicos inesquecíveis.
                 </p>
-                <button class="button1">Assine Agora</button>
+                <button class="button">Assine Agora</button>
             </li>
             <li class="plans__list__item">
                 <img src="./dist/images/logos/disney_star_plus_sm.png" alt="logo disney+">
@@ -129,7 +144,7 @@
                 <p class="text--big">
                     Assine Disney+ e Star+ juntos. Economize e aproveite agora os dois serviços por um preço único.
                 </p>
-                <button class="button1">Assine Agora</button>
+                <button class="button">Assine Agora</button>
             </li>
             <li class="plans__list__item">
                 <img src="./dist/images/logos/disney_star_plus_starzplay_underline.png" alt="logo disney+">
@@ -137,7 +152,7 @@
                 <p class="text--big">
                     Disney+, Star+ e STARZPLAY em um plano especial. Assine agora os três serviços juntos.
                 </p>
-                <button class="button1">Assine Agora</button>
+                <button class="button">Assine Agora</button>
             </li>
         </ul>
         <p class="text--small">*O preço pode variar caso a compra seja feita através de outras plataformas.</p>
@@ -152,7 +167,10 @@
         </div>
     </section>
     <section class="img-text-section img-text-section--img-full-width">
-        <img src="./dist/images/fundo_rei_leao.png" alt="rei leão">
+        <picture>
+            <source media="(max-width: 768px)" srcset="./dist/images/fundo_rei_leao_celular.png"/>
+            <img src="./dist/images/fundo_rei_leao.png" alt="rei leão">
+        </picture>
         <div class="img-text-section__text_container img-text-section--img-full-width__text_container ">
             <h2 class="title">Baixe filmes e séries</h2>
             <p class="text--big">
