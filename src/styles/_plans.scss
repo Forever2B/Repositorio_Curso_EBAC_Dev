@@ -19,9 +19,11 @@
         .button {
             margin-top: 24px;
         }
-        
+
         &__item {
             text-align: center;
+            display: grid;            
+            justify-content: space-between;
             padding: 60px 44px 44px;
             max-width: 380px;
             width: 100%;
@@ -33,7 +35,16 @@
             }
             
             img {
-                height: 83px;
+                height: 120px;
+            }
+
+            .max_img {
+                width: 100%;
+            }
+
+            .price {
+                font-size: 25px;
+                margin-bottom: 18px;
             }
 
             strong {
