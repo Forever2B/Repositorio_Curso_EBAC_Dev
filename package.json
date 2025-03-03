@@ -1,0 +1,27 @@
+{
+  "name": "repositorio_curso_ebac_dev",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html src/styles/main.scss src/scripts/main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Forever2B/Repositorio_Curso_EBAC_Dev.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Forever2B/Repositorio_Curso_EBAC_Dev/issues"
+  },
+  "homepage": "https://github.com/Forever2B/Repositorio_Curso_EBAC_Dev#readme",
+  "description": "",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.13.3",
+    "parcel": "^2.8.0",
+    "sharp": "^0.33.5"
+  }
+}
