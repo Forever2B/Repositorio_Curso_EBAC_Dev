@@ -1,7 +1,9 @@
+@use '_variables' as *;
 @use '_hero';
+@use '_event';
 @use 'components/_infosbar';
 @use 'components/_buttons';
-@use 'event';
+
 
 * {
     margin: 0;
@@ -9,6 +11,7 @@
     box-sizing: border-box;
     font-family: roboto, sans-serif;
     list-style: none;
+    color: $textcolor1;
 }
 
 .container {

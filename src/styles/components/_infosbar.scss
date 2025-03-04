@@ -1,3 +1,6 @@
+@use '../_variables' as *;
+
+
 .infos-bar {
     display: flex;
     justify-content: space-between;
@@ -9,12 +12,12 @@
         gap: 40px;
 
         &__item {
-            color: #000;
+            color: $textcolor2;
             font-size: 14px;
 
             b {
                 display: block;
-                color: #000;
+                color: $textcolor2;
                 font-size: 18px;
             }
         }
