@@ -21,6 +21,7 @@
   "description": "",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.13.3",
+    "@swc/core": "^1.11.7",
     "parcel": "^2.13.3"
   },
   "dependencies": {
