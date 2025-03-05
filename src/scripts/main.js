@@ -1,7 +1,7 @@
 AOS.init();
 
 
-const dateEvent = new Date("Apr 28, 2025 19:00:00");
+const dateEvent = new Date("Jan 01, 2026 00:00:00");
 const timeStampEvent = dateEvent.getTime();
 
 
@@ -24,6 +24,6 @@ var intervalTime = setInterval(() => {
     // EVENT 00:00:00 TIMER
     if (eventTimeLeft < 0) {
         clearInterval(intervalTime)
-        document.getElementById('counter').innerHTML = "...Ops, o Evento já acabou!";
+        document.getElementById('counter').innerHTML = "...FELIZ ANO NOVO!!";
     }
 }, 1000);
