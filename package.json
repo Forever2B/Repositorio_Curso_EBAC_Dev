@@ -22,5 +22,8 @@
   "devDependencies": {
     "@parcel/transformer-sass": "^2.13.3",
     "parcel": "^2.8.0"
+  },
+  "dependencies": {
+    "@parcel/watcher": "^2.5.1"
   }
 }
