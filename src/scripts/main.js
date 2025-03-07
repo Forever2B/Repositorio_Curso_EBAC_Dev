@@ -1,29 +1,38 @@
-AOS.init();
+// document.addEventListener('DOMContentLoaded', function(){
+//     document.getElementById('btn-searchcep').addEventListener('click', function() {
+//         const xhttp = new XMLHttpRequest();
+//         const cep = document.getElementById('cep').value;
+//         const endpoint = `https://viacep.com.br/ws/${cep}/json`;
 
+//         xhttp.open('GET', endpoint);
+//         xhttp.send();
 
-const dateEvent = new Date("Jan 01, 2026 00:00:00");
-const timeStampEvent = dateEvent.getTime();
+//         // https://viacep.com.br/ws/123123123/json
+//     })
+// })
 
+$(document).ready(function() {
+    $('#btn-searchcep').click(function() {
+        const cep = $('#cep').val();
+        const endpoint = `https://viacep.com.br/ws/${cep}/json`;
 
+        $(this).find('i').addClass('d-none');
+        $(this).find('span').removeClass('d-none');
 
-var intervalTime = setInterval(() => {
-    const timeStampNow = new Date().getTime();
-    const eventTimeLeft = timeStampEvent - timeStampNow;
+        $.ajax(endpoint).done(function(answer) {
+            console.log(answer);
 
-    const diasMs = 1000 * 60 * 60 * 24;
-    const hoursMs = 1000 * 60 * 60
-    const MinutesMs = 1000 * 60;
+            const logradouro = answer.logradouro;
+            const bairro = answer.bairro;
+            const cidade = answer.localidade;
+            const estado = answer.uf;
+            const address = `${logradouro}, ${bairro} - ${cidade} - ${estado}`;
+            $('#address').val(address);
 
-    const daysUntilEvent = Math.floor(eventTimeLeft / diasMs);
-    const hoursUntilEvent = Math.floor((eventTimeLeft % diasMs) / hoursMs);
-    const minutesUntilEvent = Math.floor((eventTimeLeft % hoursMs) / MinutesMs);
-    const secondsUntilEvent = Math.floor((eventTimeLeft % MinutesMs) / 1000);
-
-    document.getElementById('counter').innerHTML = `${daysUntilEvent}d ${hoursUntilEvent}h ${minutesUntilEvent}m ${secondsUntilEvent}s`;
-
-    // EVENT 00:00:00 TIMER
-    if (eventTimeLeft < 0) {
-        clearInterval(intervalTime)
-        document.getElementById('counter').innerHTML = "...FELIZ ANO NOVO!!";
-    }
-}, 1000);
+        })
+        setTimeout(()=>{
+            $(this).find('span').addClass('d-none');
+            $(this).find('i').removeClass('d-none');
+        }, 1000)
+    })
+})
