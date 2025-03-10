@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Forever2B/Repositorio_Curso_EBAC_Dev#readme",
   "description": "",
-  "devDependencies": {
+  "dependencies": {
+    "jquery-mask-plugin": "^1.14.16"
   }
 }

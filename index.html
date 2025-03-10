@@ -11,19 +11,19 @@
 </head>
 <body>
     <div class="container">
-        <form>
+        <form id="form-order">
             <div class="row mt-5">
                 <h4>Dados básicos</h4>
             </div>
             <div class="row mb-5">
                 <div class="col-3">
-                    <input class="form-control" type="text" placeholder="Nome">
+                    <input class="form-control" id="name" type="text" placeholder="Nome" required>
                 </div>
                 <div class="col-5">
-                    <input class="form-control" type="text" placeholder="Sobrenome">
+                    <input class="form-control" id="lastname" type="text" placeholder="Sobrenome" required>
                 </div>
                 <div class="col-4">
-                    <input class="form-control" type="email" placeholder="email">
+                    <input class="form-control" id="e-mail" type="email" placeholder="email" required>
                 </div>
             </div>
             <div class="row mt-3">
@@ -47,7 +47,8 @@
             <button class="btn btn-success" type="submit">Enviar Pedido</button>
         </form>
     </div>
-    ,<script src="./src/scripts/jquery.js"></script>
+    <script src="./src/scripts/jquery.js"></script>
+    <script src="./src/scripts/jquery.mask.js"></script>
     <script src="./src/scripts/main.js"></script>
 </body>
 </html>
