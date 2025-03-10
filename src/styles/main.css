@@ -1,7 +1,10 @@
+/* Variaveis */
 :root {
     --header-color: #474787;
     --bg-color: #d2dae2;
 }
+
+/* Estilização */
 
 * {
     font-family: sans-serif;
