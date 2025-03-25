@@ -4,6 +4,7 @@ const GlobalStyle = createGlobalStyle`
   * {
   padding: 0;
   margin: 0;
+  list-style: none;
 }`
 
 export default GlobalStyle
