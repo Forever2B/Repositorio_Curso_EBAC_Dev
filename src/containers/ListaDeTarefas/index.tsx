@@ -1,45 +1,50 @@
-import Tarefa from '../../components/FiltroCard/Tarefa'
+import Tarefa from '../../components/Tarefa'
 import { Container } from './styles'
 
-import * as enums from '../../components/FiltroCard/Tarefa/tarefa'
+import { useSelector } from 'react-redux'
+import { RootReducerType } from '../../store/index'
 
-const tarefas = [
-  {
-    titulo: 'sei lá',
-    descricao: 'sei mei sei lá mas bem sei la porque sei la sei la',
-    prioridade: enums.Prioridade.IMPORTANTE,
-    status: enums.Status.PENDENTE
-  },
-  {
-    titulo: 'titulo foda',
-    descricao: 'pipipi popopo',
-    prioridade: enums.Prioridade.IMPORTANTE,
-    status: enums.Status.CONCLUIDA
-  },
-  {
-    titulo: '03',
-    descricao: 'tic tac teco',
-    prioridade: enums.Prioridade.URGENTE,
-    status: enums.Status.PENDENTE
+const ListaDeTarefas = () => {
+  const { itens } = useSelector((state: RootReducerType) => state.tarefas)
+  const { termo, criterio, valor } = useSelector(
+    (state: RootReducerType) => state.filtro
+  )
+
+  const filtraTarefas = () => {
+    if (termo) {
+      return itens.filter(
+        (item) => item.titulo.toLowerCase().search(termo.toLowerCase()) >= 0
+      )
+    } else {
+      return itens
+    }
   }
-]
 
-const ListaDeTarefas = () => (
-  <Container>
-    <p>2 tarefas marcadas como: &quot;categoria&quot; e &quot;termo&quot;</p>
-    <ul>
-      {tarefas.map((t) => (
-        <li key={t.titulo}>
-          <Tarefa
-            titulo={t.prioridade}
-            descricao={t.descricao}
-            prioridade={t.prioridade}
-            status={t.status}
-          />
-        </li>
-      ))}
-    </ul>
-  </Container>
-)
+  return (
+    <Container>
+      <p>
+        2 tarefas marcadas como: &quot;categoria&quot; e &quot;{termo}&quot;
+      </p>
+      <ul>
+        <li>{termo}</li>
+        <li>{criterio}</li>
+        <li>{valor}</li>
+      </ul>
+      <ul>
+        {filtraTarefas().map((t) => (
+          <li key={t.id}>
+            <Tarefa
+              id={t.id}
+              titulo={t.titulo}
+              descricao={t.descricao}
+              prioridade={t.prioridade}
+              estado={t.estado}
+            />
+          </li>
+        ))}
+      </ul>
+    </Container>
+  )
+}
 
 export default ListaDeTarefas

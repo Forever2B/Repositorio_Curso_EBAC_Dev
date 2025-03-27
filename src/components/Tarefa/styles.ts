@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import StyleVariables from '../../../styles/StyleVariables'
+import StyleVariables from '../../styles/StyleVariables'
 import * as enums from './tarefa'
 
 type TagProps = {
