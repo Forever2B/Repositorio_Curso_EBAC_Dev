@@ -72,9 +72,6 @@ export const Botao = styled.button`
   background-color: #2f3640;
 `
 
-export const BotaoSalvar = styled(Botao)`
-  background-color: ${StyleVariables.c02};
-`
 export const BotaoCancelarRemover = styled(Botao)`
   background-color: ${StyleVariables.c01};
 `
