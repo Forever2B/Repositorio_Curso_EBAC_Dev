@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 import StyleVariables from '../../styles/StyleVariables'
+import { Botao } from '../../styles'
 import * as enums from './tarefa'
 
 type TagProps = {
@@ -27,9 +28,15 @@ export const Card = styled.div`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-color: #fcfcfc;
   border-radius: 16px;
+
+  label {
+    display: flex;
+    margin-bottom: 16px;
+    align-items: center;
+  }
 `
 export const Titulo = styled.h3`
-  margin-bottom: 16px;
+  margin-left: 8px;
   font-size: 18px;
   font-weight: bold;
 `
@@ -59,17 +66,6 @@ export const Descricao = styled.textarea`
 export const BarraAcoes = styled.div`
   padding-top: 16px;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
-`
-export const Botao = styled.button`
-  padding: 8px 12px;
-  margin-right: 8px;
-  font-size: 12px;
-  font-weight: bold;
-  border-radius: 8px;
-  cursor: pointer;
-  border: none;
-  color: #fff;
-  background-color: #2f3640;
 `
 
 export const BotaoCancelarRemover = styled(Botao)`

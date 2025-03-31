@@ -1,6 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components'
 import StyleVariables from './StyleVariables'
-import { Botao } from '../components/Tarefa/styles'
 
 const EstiloGlobal = createGlobalStyle`
 * {
@@ -39,6 +38,17 @@ export const Campo = styled.input`
   width: 100%;
 `
 
+export const Botao = styled.button`
+  padding: 8px 12px;
+  margin-right: 8px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  background-color: #2f3640;
+`
 export const BotaoSalvar = styled(Botao)`
   background-color: ${StyleVariables.c02};
 `
