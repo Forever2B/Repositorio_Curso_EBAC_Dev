@@ -1,24 +1,13 @@
-import * as enums from '../components/Tarefa/tarefa'
-
 class Tarefa {
   id: number
-  titulo: string
-  descricao: string
-  prioridade: enums.Prioridade
-  estado: enums.Status
-
-  constructor(
-    id: number,
-    titulo: string,
-    descricao: string,
-    prioridade: enums.Prioridade,
-    estado: enums.Status
-  ) {
+  nome: string
+  email: string
+  celular: string
+  constructor(id: number, nome: string, email: string, celular: string) {
     this.id = id
-    this.titulo = titulo
-    this.descricao = descricao
-    this.prioridade = prioridade
-    this.estado = estado
+    this.nome = nome
+    this.email = email
+    this.celular = celular
   }
 }
 

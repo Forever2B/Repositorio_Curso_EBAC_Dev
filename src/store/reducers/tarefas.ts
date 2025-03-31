@@ -1,7 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 import Tarefa from '../../models/Tarefa'
-import * as enums from '../../components/Tarefa/tarefa'
 
 type TarefasState = {
   itens: Tarefa[]
@@ -11,31 +10,27 @@ const initialState: TarefasState = {
   itens: [
     {
       id: 1,
-      titulo: 'Teste01',
-      descricao: 'asasdadawdawdawdaw',
-      prioridade: enums.Prioridade.URGENTE,
-      estado: enums.Status.PENDENTE
+      nome: 'Pessoa 01',
+      email: 'testeTeste@gmail.com',
+      celular: '(55) 2873-9098'
     },
     {
       id: 2,
-      titulo: 'Teste02',
-      descricao: 'grgrdgrdsgrdgrsdg',
-      prioridade: enums.Prioridade.NORMAL,
-      estado: enums.Status.PENDENTE
+      nome: 'Pessoa 02',
+      email: 'testeEmail@gmail.com',
+      celular: '(55) 4444-4444'
     },
     {
       id: 3,
-      titulo: 'Teste03',
-      descricao: 'dadawdawdawd',
-      prioridade: enums.Prioridade.URGENTE,
-      estado: enums.Status.CONCLUIDA
+      nome: 'Pessoa 03',
+      email: 'issoEumTeste@gmail.com',
+      celular: '(55) 2843-8038'
     },
     {
       id: 4,
-      titulo: 'Teste04',
-      descricao: 'ythrthrsfadawdawdaw',
-      prioridade: enums.Prioridade.IMPORTANTE,
-      estado: enums.Status.CONCLUIDA
+      nome: 'Pessoa 04',
+      email: 'testeeeeee@gmail.com',
+      celular: '(55) 8733-8422'
     }
   ]
 }
@@ -58,7 +53,7 @@ const tarefasSlice = createSlice({
     cadastrar: (state, action: PayloadAction<Omit<Tarefa, 'id'>>) => {
       const tarefaJaExiste = state.itens.find(
         (tarefa) =>
-          tarefa.titulo.toLowerCase() === action.payload.titulo.toLowerCase()
+          tarefa.nome.toLowerCase() === action.payload.nome.toLowerCase()
       )
       if (tarefaJaExiste) {
         alert('Já existe uma tarefa com esse nome!!')
@@ -71,23 +66,9 @@ const tarefasSlice = createSlice({
         }
         state.itens.push(tarefaNova)
       }
-    },
-    alteraStatus: (
-      state,
-      action: PayloadAction<{ id: number; finalizado: boolean }>
-    ) => {
-      const IndexDaTarefa = state.itens.findIndex(
-        (t) => t.id === action.payload.id
-      )
-
-      if (IndexDaTarefa >= 0) {
-        state.itens[IndexDaTarefa].estado = action.payload.finalizado
-          ? enums.Status.CONCLUIDA
-          : enums.Status.PENDENTE
-      }
     }
   }
 })
 
 export default tarefasSlice.reducer
-export const { remover, editar, cadastrar, alteraStatus } = tarefasSlice.actions
+export const { remover, editar, cadastrar } = tarefasSlice.actions

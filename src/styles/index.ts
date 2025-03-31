@@ -15,11 +15,27 @@ export const Container = styled.div`
   display: grid;
   grid-template-columns: 224px auto;
 `
+export const ContainerExtra = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+`
+
 export const MainContainer = styled.main`
-  padding: 0 40px;
+  padding: 40px 40px 0;
+  width: 50vw;
   height: 100vh;
   overflow-y: scroll;
 `
+export const MainContainer2 = styled(MainContainer)`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+
 export const Titulo = styled.h2`
   margin-top: 16px;
   font-weight: bold;
@@ -36,6 +52,11 @@ export const Campo = styled.input`
   color: #6666;
   border-color: #6666;
   width: 100%;
+`
+export const Campo2 = styled(Campo)`
+  width: 40vw;
+  margin-top: 40px;
+  margin-bottom: 18px;
 `
 
 export const Botao = styled.button`

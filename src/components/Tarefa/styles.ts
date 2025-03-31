@@ -2,25 +2,6 @@ import styled from 'styled-components'
 
 import StyleVariables from '../../styles/StyleVariables'
 import { Botao } from '../../styles'
-import * as enums from './tarefa'
-
-type TagProps = {
-  prioridade?: enums.Prioridade
-  status?: enums.Status
-  parametro: 'status' | 'prioridade'
-}
-
-function retornaCorDeFundo(props: TagProps): string {
-  if (props.parametro === 'status') {
-    if (props.status === enums.Status.PENDENTE) return StyleVariables.c04
-    if (props.status === enums.Status.CONCLUIDA) return StyleVariables.c02
-  } else {
-    if (props.prioridade === enums.Prioridade.URGENTE) return StyleVariables.c01
-    if (props.prioridade === enums.Prioridade.IMPORTANTE)
-      return StyleVariables.c04
-  }
-  return '#ccc'
-}
 
 export const Card = styled.div`
   padding: 16px;
@@ -37,10 +18,11 @@ export const Card = styled.div`
 `
 export const Titulo = styled.h3`
   margin-left: 8px;
+  margin-bottom: 16px;
   font-size: 18px;
   font-weight: bold;
 `
-export const Tag = styled.span<TagProps>`
+export const Tag = styled.span`
   display: inline-block;
   border-radius: 8px;
   margin-right: 16px;
@@ -48,13 +30,13 @@ export const Tag = styled.span<TagProps>`
   font-size: 10px;
   font-weight: bold;
   color: #fff;
-  background-color: ${(props) => retornaCorDeFundo(props)};
+  background-color: #ccc;
 `
 export const Descricao = styled.textarea`
   width: 100%;
+  height: 38px;
   display: block;
-  margin-top: 16px;
-  margin-bottom: 16px;
+  margin-top: 8px;
   line-height: 24px;
   font-size: 14px;
   resize: none;

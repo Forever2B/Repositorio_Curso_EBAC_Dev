@@ -1,9 +1,8 @@
-import { ChangeEvent, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 // REDUCESR - STORE - MODELS - ENUMS
-import { remover, editar, alteraStatus } from '../../store/reducers/tarefas'
+import { remover, editar } from '../../store/reducers/tarefas'
 import TarefaClass from '../../models/Tarefa'
-import * as enums from './tarefa'
 // ESTILOS
 import * as S from './styles'
 import { Botao, BotaoSalvar } from '../../styles'
@@ -11,71 +10,56 @@ import { Botao, BotaoSalvar } from '../../styles'
 type Props = TarefaClass
 
 const Tarefa = ({
-  descricao: descricaoOriginal,
-  prioridade,
-  estado,
-  titulo,
+  email: emailOriginal,
+  celular: celularOriginal,
+  nome,
   id
 }: Props) => {
   const dispatch = useDispatch()
   const [estaEditando, setEstaEditando] = useState(false)
-  const [descricao, setdescricao] = useState('')
+  const [email, setEmail] = useState('')
+  const [celular, setCelular] = useState('')
 
   useEffect(() => {
-    if (descricaoOriginal.length > 0) {
-      setdescricao(descricaoOriginal)
+    if (emailOriginal.length > 0) {
+      setEmail(emailOriginal)
     }
-  }, [descricaoOriginal])
+    if (celularOriginal.length > 0) {
+      setCelular(celularOriginal)
+    }
+  }, [emailOriginal, celularOriginal])
 
   function CancelaEdicao() {
     setEstaEditando(false)
-    setdescricao(descricaoOriginal)
+    setEmail(emailOriginal)
+    setCelular(celularOriginal)
   }
   function SalvaEdicao() {
     setEstaEditando(false)
     dispatch(
       editar({
-        descricao: descricao,
-        prioridade,
-        estado,
-        titulo,
+        email: email,
+        celular: celular,
+        nome,
         id
       })
     )
   }
-  function alterarStatusTarefa(e: ChangeEvent<HTMLInputElement>) {
-    dispatch(
-      alteraStatus({
-        id,
-        finalizado: e.target.checked
-      })
-    )
-  }
-
   return (
     <S.Card>
-      <label htmlFor={titulo}>
-        <input
-          type="checkbox"
-          id={titulo}
-          checked={estado === enums.Status.CONCLUIDA}
-          onChange={alterarStatusTarefa}
-        />
-        <S.Titulo>
-          {estaEditando && <em>Editando: </em>}
-          {titulo}
-        </S.Titulo>
-      </label>
-      <S.Tag parametro="prioridade" prioridade={prioridade}>
-        {prioridade}
-      </S.Tag>
-      <S.Tag parametro="status" status={estado}>
-        {estado}
-      </S.Tag>
+      <S.Titulo>
+        {estaEditando && <em>Editando contato: </em>}
+        {nome}
+      </S.Titulo>
       <S.Descricao
         disabled={!estaEditando}
-        value={descricao}
-        onChange={(e) => setdescricao(e.target.value)}
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      />
+      <S.Descricao
+        disabled={!estaEditando}
+        value={celular}
+        onChange={(e) => setCelular(e.target.value)}
       />
       <S.BarraAcoes>
         {estaEditando ? (
