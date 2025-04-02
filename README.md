@@ -1,12 +1,15 @@
-# React + Vite
+# Requisitos
+## Instalar as dependências
+`npm install` ou `yarn install`
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Para executar os testes
+`npm run test` ou `yarn test`
 
-Currently, two official plugins are available:
+## Para executar a aplicação em localhost
+`npm start` ou `yarn start`
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Para o exercício
+O arquivo onde o teste deve ser escrito está em src/components/PostComments/PostComments.test.tsx
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Resolução
+Neste repositório existe uma branch chamada **resolucao** com o exercício resolvido, é importante que a utilize como consulta caso tenha dificuldades ou até mesmo para comparar com a abordagem que você adotou, **não faça simplesmente um copiar/colar** - confio em você ;)
