@@ -1,27 +1,25 @@
 {
-  "name": "react",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "name": "repositorio_curso_ebac_dev",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/Forever2B/Repositorio_Curso_EBAC_Dev#readme",
+  "bugs": {
+    "url": "https://github.com/Forever2B/Repositorio_Curso_EBAC_Dev/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Forever2B/Repositorio_Curso_EBAC_Dev.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "cypress": "cypress",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "cypress": "^12.6.0"
   },
-  "devDependencies": {
-    "@eslint/js": "^9.21.0",
-    "@types/react": "^19.0.10",
-    "@types/react-dom": "^19.0.4",
-    "@vitejs/plugin-react": "^4.3.4",
-    "eslint": "^9.21.0",
-    "eslint-plugin-react-hooks": "^5.1.0",
-    "eslint-plugin-react-refresh": "^0.4.19",
-    "globals": "^15.15.0",
-    "vite": "^6.2.0"
-  }
+  "devDependencies": {}
 }
